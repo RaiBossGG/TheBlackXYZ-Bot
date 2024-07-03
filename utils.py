@@ -17,17 +17,25 @@ import requests
 import string
 import json
 import http.client
+
+# main files 
 from info import *
 from imdb import Cinemagoer 
+from Script import script
+
+# pyrogram imports
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import enums
 from pyrogram.errors import *
+
+# database import 
 from typing import Union
-from Script import script
-from datetime import datetime, date
 from typing import List
+from datetime import datetime, date
 from database.users_chats_db import db
 from database.join_reqs import JoinReqs
+
+# verification 
 from bs4 import BeautifulSoup
 from shortzy import Shortzy
 
