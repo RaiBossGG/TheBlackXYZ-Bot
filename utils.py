@@ -508,7 +508,7 @@ async def get_shortlink(chat_id, link):
     else:
         URL = SHORTLINK_URL
         API = SHORTLINK_API
-    if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in") or URL.startswith("yamlinks.com":
+    if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in") or URL.startswith("yamlinks.com"):
         URL = SHORTLINK_URL
         API = SHORTLINK_API
     if URL == "api.yamlinks.com":
