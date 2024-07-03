@@ -37,13 +37,12 @@ from plugins import web_server
 from bot import TheBlackBot
 from util.keepalive import ping_server
 from bot.clients import initialize_clients
- 
+
 
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
 TheBlackBot.start()
 loop = asyncio.get_event_loop()
-PORT = "8080"
 
 
 async def start():
@@ -63,7 +62,7 @@ async def start():
             spec.loader.exec_module(load)
             sys.modules["plugins." + plugin_name] = load
             print("The Black Imported => " + plugin_name)
-    if ON_HEROKU:
+    if ON_KOYEB:
         asyncio.create_task(ping_server())
     b_users, b_chats = await db.get_banned()
     temp.BANNED_USERS = b_users
@@ -74,7 +73,6 @@ async def start():
     temp.U_NAME = me.username
     temp.B_NAME = me.first_name
     TheBlackBot.username = '@' + me.username
-  #  logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
     logging.info(LOG_STR)
     logging.info(script.LOGO)
     tz = pytz.timezone('Asia/Kolkata')
@@ -85,6 +83,7 @@ async def start():
     app = web.AppRunner(await web_server())
     await app.setup()
     bind_address = "0.0.0.0"
+    PORT = "8080"
     await web.TCPSite(app, bind_address, PORT).start()
     await idle()
 
@@ -93,7 +92,7 @@ if __name__ == '__main__':
     try:
         loop.run_until_complete(start())
     except KeyboardInterrupt:
-        logging.info('Service Stopped Bye 👋')
+        logging.info('Service Is Stop 🚏 Sweety 💌')
 
 # Credit @TheBlackXYZ.
 # Please Don't remove credit.
