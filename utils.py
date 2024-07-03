@@ -508,10 +508,10 @@ async def get_shortlink(chat_id, link):
     else:
         URL = SHORTLINK_URL
         API = SHORTLINK_API
-    if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in"):
+    if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in") or URL.startswith("yamlinks.com":
         URL = SHORTLINK_URL
         API = SHORTLINK_API
-    if URL == "api.onepagelink.in":
+    if URL == "api.yamlinks.com":
         url = f'https://{URL}/easy_api'
         params = {
             "key": API,
@@ -544,7 +544,7 @@ async def get_tutorial(chat_id):
 async def get_verify_shorted_link(link, url, api):
     API = api
     URL = url
-    if URL == "api.shareus.io":
+    if URL == "api.yamlinks.com":
         url = f'https://{URL}/easy_api'
         params = {
             "key": API,
@@ -662,7 +662,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorrio")
+                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/TheBlackXYZBotz")
                                 ]
                             ]
                         )
