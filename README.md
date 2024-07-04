@@ -61,6 +61,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________________
 
 # Commands🫣
+<details><summary><b>Command</b></summary>
 ```
  start - check the bot is alive 
  logs - to get the recent errors [Admin] 
@@ -130,6 +131,7 @@ font - to get text to amazing font
 purgerequests - all jion request delete form database 
 totalrequests - get total number of jion request from your database 
 ```
+</details>
 
 # Any Doubt Then Contact - 💯
 Update Channel 🙂 <a href='https://telegram.dog/TheBlackXYZBotz'>Update Channel</a> Update Regarding For Repo.</b>
