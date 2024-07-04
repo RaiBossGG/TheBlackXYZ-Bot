@@ -51,12 +51,8 @@ ________________________________________________________________________________
 - [x] Custom Tutorial Button
 - [x] Bot Pm File Auto Delete
 - [x] Ai Spell Check 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
+- [x] Custom url Shotner verification 
+- [x] Multiple Features
 
 ____________________________________________________________________________________________________________________________________________
 
@@ -136,7 +132,7 @@ totalrequests - get total number of jion request from your database
 
 </details>
 
-# Any Doubt Then Contact - 💯
+# Contact - 
 Update Channel 🙂 <a href='https://telegram.dog/TheBlackXYZBotz'>Update Channel</a> Update Regarding For Repo.</b>
 
 # Add from .env
@@ -201,7 +197,7 @@ URL
 ```
 </details>
 
-# Render Env. (compulsory)
+# Render Env.(compulsory)
 ```
 PYTHON_VERSION - 3.10.8
 
