@@ -6,40 +6,21 @@
 # For Any ERROR Please Contact Me -> Telegram ->@TheBlackXYZBotz & Insta @TheBlackXYZ
 # Please Love & Support 💗💗🙏
 
-# basic 
-import os
-import string,
-import logging
-import random
-import asyncio
-import time
-import datetime
-import re
-import sys
-import json
-import base64
-
-# main files 
-from info import *
+import os, string, logging, random, asyncio, time, datetime, re, sys, json, base64
 from Script import script
-
-# pyrogram file import 
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
-
-# database file import 
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db, delete_all_referal_users, get_referal_users_count, get_referal_all_users, referal_add_user
 from database.join_reqs import JoinReqs
-from database.connections_mdb import active_connection
-
-# util File import
+from info import *
 from utils import get_settings, pub_is_subscribed, get_size, is_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial, get_seconds
+from database.connections_mdb import active_connection
 from urllib.parse import quote_plus
 from util.file_properties import get_name, get_hash, get_media_file_size
-
 logger = logging.getLogger(__name__)
+
 BATCH_FILES = {}
 join_db = JoinReqs
 
@@ -77,31 +58,30 @@ async def auto_approve(client, message: ChatJoinRequest):
             else:
                 if PREMIUM_AND_REFERAL_MODE == True:
                     buttons = [[
-                        InlineKeyboaKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-                InlineKeyboardButton('💸Eᴀʀɴ Mᴏɴᴇʏ💸', callback_data="shortlink_info"),
-                InlineKeyboardButton('📀Mᴏᴠɪᴇ Gʀᴏᴜᴘ📀', url=GRP_LNK)
-            ],[
-                InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-            ],[
-                InlineKeyboardButton('🪙 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🪙', callback_data='subscription')
-            ],[ 
-                InlineKeyboardButton('♦️Bᴏᴛᴢ Cʜᴀɴɴᴇʟ♦️', url='https://t.me/TheBlackXYZBotz'),
-                InlineKeyboardButton('♦️Mᴀɪɴ Cʜᴀɴɴᴇʟ♦️', url=CHNL_LNK)
-            ]]
-        else:
-            buttons = [[
-                InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-                InlineKeyboardButton('💸Eᴀʀɴ Mᴏɴᴇʏ💸', callback_data="shortlink_info"),
-                InlineKeyboardButton('📀Mᴏᴠɪᴇ Gʀᴏᴜᴘ📀', url=GRP_LNK)
-            ],[
-                InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-            ],[
-                InlineKeyboardButton('♦️Mᴀɪɴ Cʜᴀɴɴᴇʟ♦️', url=CHNL_LNK)
-             ]]
+                        InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    ],[
+                        InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
+                        InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+                    ],[
+                        InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+                        InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+                    ],[
+                        InlineKeyboardButton('🔻 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🔻', callback_data='subscription')
+                    ],[
+                        InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    ]]
+                else:
+                    buttons = [[
+                        InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    ],[
+                        InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
+                        InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+                    ],[
+                        InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+                        InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+                    ],[
+                        InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    ]]
                 reply_markup = InlineKeyboardMarkup(buttons)
                 m=await client.send_sticker(chat_id = message.from_user.id, sticker = "CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
                 await asyncio.sleep(1)
