@@ -43,7 +43,7 @@ ppath = "plugins/*.py"
 files = glob.glob(ppath)
 TheBlackBot.start()
 loop = asyncio.get_event_loop()
-
+PORT = "8080"
 
 async def start():
     print('\n')
@@ -83,7 +83,6 @@ async def start():
     app = web.AppRunner(await web_server())
     await app.setup()
     bind_address = "0.0.0.0"
-    PORT = "8080"
     await web.TCPSite(app, bind_address, PORT).start()
     await idle()
 
@@ -92,7 +91,7 @@ if __name__ == '__main__':
     try:
         loop.run_until_complete(start())
     except KeyboardInterrupt:
-        logging.info('Service Is Stop 🚏 Sweety 💌')
+        logging.info('Service Is Stop Sweety 🚏')
 
 # Credit @TheBlackXYZ.
 # Please Don't remove credit.
