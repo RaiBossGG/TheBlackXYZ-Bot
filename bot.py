@@ -38,10 +38,9 @@ from bot import TheBlackBot
 from util.keepalive import ping_server
 from bot.clients import initialize_clients
 
-
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
-TheBlackBot.start()
+TheBlackBot.start() 
 loop = asyncio.get_event_loop()
 PORT = "8080"
 
@@ -54,6 +53,7 @@ async def start():
     for name in files:
         with open(name) as a:
             patt = Path(a.name)
+          #  Extra_name =patt.stem.replace(".py", "" )
             plugin_name = patt.stem.replace(".py", "")
             plugins_dir = Path(f"plugins/{plugin_name}.py")
             import_path = "plugins.{}".format(plugin_name)
