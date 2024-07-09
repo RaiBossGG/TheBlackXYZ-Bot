@@ -34,7 +34,10 @@ ________________________________________________________________________________
 • Colne 
 • solve 
 • How to edit repoo on yt - youtube.com/TheBlackXYZ24
+
 # Amazing New Feature 😄
+<details><summary><b>✅Features✅</b></summary>
+  
 - [x] Premium Plan Feature 
 - [x] Refer To Get Premium
 - [x] Files Rename Features 
@@ -57,7 +60,7 @@ ________________________________________________________________________________
 - [x] Ai Spell Check 
 - [x] Custom url Shotner verification 
 - [x] Multiple Features
-
+<details>
 ____________________________________________________________________________________________________________________________________________
 
 # Commands🫣
@@ -224,7 +227,7 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________________________________________
 
-# Deploy On Multiple Platforms 
+# Deploy On Platform
 
 <details><summary><b>Deploy To Heroku</b></summary>
 <p>
@@ -293,7 +296,7 @@ Edit info.py with variables as given below then run bot
 
 ____________________________________________________________________________________________________________________________________________
 
-# Special Thanks To Everyone 💞❤️
+# Thanks To  Everyone 💞❤️
  - <b>Thanks To Dan For His Awesome
  - [Library](https://github.com/pyrogram/pyrogram)
  - Thanks To Mayuri-Chan For His Awesome
@@ -309,7 +312,8 @@ ________________________________________________________________________________
 
 # Note 🏷️
  
-* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/Itz_rohan_24)
+* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/TheBlackXYZ)
+* [![Contact](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/Itz_rohan_24)
 
 <b>[Note To A So Called Dev](https://telegram.dog/TheBlackXYZBotz): 
 
