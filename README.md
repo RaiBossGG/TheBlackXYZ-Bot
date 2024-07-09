@@ -36,6 +36,7 @@ ________________________________________________________________________________
 • How to edit repoo on yt - youtube.com/TheBlackXYZ24
 
 # Amazing New Feature 😄
+
 <details><summary><b>✅Features✅</b></summary>
   
 - [x] Premium Plan Feature 
@@ -60,7 +61,10 @@ ________________________________________________________________________________
 - [x] Ai Spell Check 
 - [x] Custom url Shotner verification 
 - [x] Multiple Features
+- [ ] 
+
 <details>
+  
 ____________________________________________________________________________________________________________________________________________
 
 # Commands🫣
