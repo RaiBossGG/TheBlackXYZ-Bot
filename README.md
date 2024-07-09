@@ -63,7 +63,6 @@ ________________________________________________________________________________
 # Commands🫣
 <details><summary><b>Command</b></summary>
 
-
  ```
  start - check the bot is alive 
  logs - to get the recent errors [Admin] 
@@ -91,7 +90,7 @@ ________________________________________________________________________________
  enable - re-enable chat [Admin]
  ban  - to ban a user [Admin]
  unban  - to unban a user [Admin]
-channel - to get list of total connected channels
+ channel - to get list of total connected channels
  broadcast - to broadcast a message to all users 
  grp_broadcast - to broadcast a message to all connected groups [Admin]
  batch - to create link for multiple posts 
@@ -126,14 +125,13 @@ channel - to get list of total connected channels
  del_thumb - delete your saved thumbnail
  stream -generate online stream and direct download link of your file 
  save - restrict download content from you link
-join - send invite link of restricted channel you want download content 
-telegraph - get any post link telegraph  5 MB
-stickerid - to get sticker ID
-font - to get text to amazing font 
-purgerequests - all jion request delete form database 
-totalrequests - get total number of jion request from your database 
+ join - send invite link of restricted channel you want download content 
+ telegraph - get any post link telegraph  5 MB
+ stickerid - to get sticker ID
+ font - to get text to amazing font 
+ purgerequests - all jion request delete form database 
+ totalrequests - get total number of jion request from your database 
 ```
-
 </details>
 
 # Contact - 
