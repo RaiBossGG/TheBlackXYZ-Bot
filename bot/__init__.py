@@ -40,6 +40,12 @@ class TheBlackXBot(Client):
             plugins={"root": "plugins"},
             sleep_threshold=5,
         )
+        
+        #_______________colne features added ________#
+        async def set_self(self):
+        temp.BOT = self
+           #_______________#
+    
     async def iter_messages(
         self,
         chat_id: Union[int, str],
