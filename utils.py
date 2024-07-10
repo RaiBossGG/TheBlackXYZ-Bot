@@ -55,6 +55,7 @@ class temp(object):
     MELCOW = {}
     U_NAME = None
     B_NAME = None
+    BOT = None
     GETALL = {}
     SHORT = {}
     SETTINGS = {}
