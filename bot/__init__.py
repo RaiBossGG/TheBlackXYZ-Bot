@@ -39,12 +39,10 @@ class TheBlackXBot(Client):
             workers=50,
             plugins={"root": "plugins"},
             sleep_threshold=5,
-        )
-        
-        #_______________colne features added ________#
-        async def set_self(self):
+        ) #_______________colne features added ________#
+       
+    async def set_self(self):
         temp.BOT = self
-           #_______________#
     
     async def iter_messages(
         self,
