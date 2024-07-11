@@ -1,6 +1,10 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Credit @TheBlackXYZ.
+# Please Don't remove credit.
+# TheBlackXYZBotz Forever !
+# Thanks You For Help Us In This Amazing Creativity 
+# Thanks You For Giving Me Credit @TheBlackXYZBotz
+# For Any ERROR Please Contact Me -> Telegram ->@TheBlackXYZBotz & Insta @TheBlackXYZ
+# Please Love & Support 💗💗🙏
 
 import os, logging, string, asyncio, time, re, ast, random, math, pytz, pyrogram
 from datetime import datetime, timedelta, date, time
