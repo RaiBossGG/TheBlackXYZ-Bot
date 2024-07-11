@@ -1,6 +1,6 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Credit @TheBlackXYZ.
+# Please Don't remove credit.
+# TheBlackXYZBotz Forever !
 
 import os, logging, string, asyncio, time, re, ast, random, math, pytz, pyrogram
 from datetime import datetime, timedelta, date, time
@@ -764,7 +764,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🔍 ᴀʙᴏᴜᴛ", callback_data="about"),
             InlineKeyboardButton("🏡 ʜᴏᴍᴇ", callback_data="start")
         ]]
-        await query.message.edit_text(text = text, reply_markup = InlineKeyboardMarkup(btn))
+        await query.message.edit_text(text = script.CLONE_ABOUT_TXT.format(me.mention, temp.U_NAME, temp.B_NAME), reply_markup = InlineKeyboardMarkup(btn))
+        
 
     if query.data.startswith("file"):
         clicked = query.from_user.id
