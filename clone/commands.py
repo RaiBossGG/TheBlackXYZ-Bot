@@ -1,10 +1,6 @@
 # Credit @TheBlackXYZ.
 # Please Don't remove credit.
-# TheBlackXYZBotz Forever !
-# Thanks You For Help Us In This Amazing Creativity 
-# Thanks You For Giving Me Credit @TheBlackXYZBotz
-# For Any ERROR Please Contact Me -> Telegram ->@TheBlackXYZBotz & Insta @TheBlackXYZ
-# Please Love & Support 💗💗🙏
+# TheBlackXYZBotz Forever.
 
 import os, string, logging, random, asyncio, time, datetime, re, sys, json, base64
 from Script import script
@@ -15,7 +11,8 @@ from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, ge
 from database.users_chats_db import db
 from CloneTechVJ.database.clone_bot_userdb import clonedb
 from info import *
-from utils import get_settings, pub_is_subscribed, get_size, is_subscribed, save_group_settings, temp, get_seconds, get_clone_shortlink
+from shortzy import Shortzy
+from utils import get_size, temp, get_seconds, get_clone_shortlink
 logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -24,27 +21,30 @@ async def start(client, message):
     cd = await db.get_bot(me.id)
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{me.username}?startgroup=true')
+            InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{me.username}?startgroup=true')
         ]]
         if cd["update_channel_link"] != None:
-            buttons.append([[InlineKeyboardButton('🍿 Join Update Channel 🍿', url=f'{cd["update_channel_link"]}')]])
+            buttons.append([[InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍿', url=f'{cd["update_channel_link"]}')]])
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, me.username, me.first_name), reply_markup=reply_markup)
+        await message.reply(script.CLONE_START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, me.username, me.first_name), reply_markup=reply_markup)
         return 
     if not await clonedb.is_user_exist(me.id, message.from_user.id):
         await clonedb.add_user(me.id, message.from_user.id)
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{me.username}?startgroup=true')
+            InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{me.username}?startgroup=true')
+        ],[
+            InlineKeyboardButton('🕵️ ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('🔍 ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         if cd["update_channel_link"] != None:
-            buttons.append([[InlineKeyboardButton('🍿 Join Update Channel 🍿', url=f'{cd["update_channel_link"]}')]])
+            buttons.append([[InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍿', url=f'{cd["update_channel_link"]}')]])
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_text(
-            text=script.START_TXT.format(message.from_user.mention, me.username, me.first_name),
+            text=script.CLONE_START_TXT.format(message.from_user.mention, me.username, me.first_name),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -101,7 +101,7 @@ async def start(client, message):
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if cd["update_channel_link"] != None:
                 button = [[
-                    InlineKeyboardButton('🍿 Join Update Channel 🍿', url=f'{cd["update_channel_link"]}')
+                    InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍿', url=f'{cd["update_channel_link"]}')
                 ]]
                 reply_markup=InlineKeyboardMarkup(button)
             else:
@@ -142,7 +142,7 @@ async def start(client, message):
         try:
             if cd["update_channel_link"] != None:
                 button = [[
-                    InlineKeyboardButton('🍿 Join Update Channel 🍿', url=f'{cd["update_channel_link"]}')
+                    InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍿', url=f'{cd["update_channel_link"]}')
                 ]]
                 reply_markup=InlineKeyboardMarkup(button)
             else:
@@ -178,7 +178,7 @@ async def start(client, message):
         f_caption = f"@TheBlackXYZ  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if cd["update_channel_link"] != None:
         button = [[
-            InlineKeyboardButton('🍿 Join Update Channel 🍿', url=f'{cd["update_channel_link"]}')
+            InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍿', url=f'{cd["update_channel_link"]}')
         ]]
         reply_markup=InlineKeyboardMarkup(button)
     else:
@@ -196,3 +196,60 @@ async def start(client, message):
     await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
     return   
   
+@Client.on_message(filters.command("settings") & filters.private)
+async def settings(client, message):
+    me = await client.get_me()
+    owner = await db.get_bot(me.id)
+    if owner["user_id"] != message.from_user.id:
+        return
+    url = await client.ask(message.chat.id, "<b>Now Send Me Your Shortlink Site Domain Or Url Without https://</b>")
+    api = await client.ask(message.chat.id, "<b>Now Send Your Api</b>")
+    try:
+        shortzy = Shortzy(api_key=api.text, base_site=url.text)
+        link = 'https://t.me/TheBlackXYZ'
+        await shortzy.convert(link)
+    except Exception as e:
+        await message.reply(f"**Error In Converting Link**\n\n<code>{e}</code>\n\n**Start The Process Again By - /settings**", reply_markup=InlineKeyboardMarkup(btn))
+        return
+    tutorial = await client.ask(message.chat.id, "<b>Now Send Me Your How To Open Link means Tutorial Link.</b>")
+    if not tutorial.text.startswith(('https://', 'http://')):
+        await message.reply("**Invalid Link. Start The Process Again By - /settings**")
+        return 
+    link = await client.ask(message.chat.id, "<b>Now Send Me Your Update Channel Link Which Is Shown In Your Start Button And Below File Button.</b>")
+    if not link.text.startswith(('https://', 'http://')):
+        await message.reply("**Invalid Link. Start The Process Again By - /settings**")
+        return 
+    data = {
+        'url': url.text,
+        'api': api.text,
+        'tutorial': tutorial.text,
+        'update_channel_link': link.text
+    }
+    await db.update_bot(me.id, data)
+    await message.reply("**Successfully Added All Settings**")
+
+@Client.on_message(filters.command("reset") & filters.private)
+async def reset_settings(client, message):
+    me = await client.get_me()
+    owner = await db.get_bot(me.id)
+    if owner["user_id"] != message.from_user.id:
+        return
+    if owner["url"] == None:
+        await message.reply("**No Settings Found.**")
+    else:
+        data = {
+            'url': None,
+            'api': None,
+            'tutorial': None,
+            'update_channel_link': None
+        }
+        await db.update_bot(me.id, data)
+        await message.reply("**Successfully Reset All Settings To Default.**")
+
+@Client.on_message(filters.command("stats") & filters.private)
+async def stats(client, message):
+    me = await client.get_me()
+    total_users = await clonedb.total_users_count(me.id)
+    total = await Media.count_documents()
+    await message.reply(f"**Total Files : {total}\n\nTotal Users : {total_users}**")
+
