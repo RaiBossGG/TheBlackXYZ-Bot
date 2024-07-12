@@ -100,7 +100,7 @@ async def start(client, message):
             size=get_size(files1.file_size)
             f_caption=files1.caption
             if f_caption is None:
-                f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
+                f_caption = f"@TheBlackXYZ  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if cd["update_channel_link"] != None:
                 button = [[
                     InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍿', url=f'{cd["update_channel_link"]}')
@@ -175,7 +175,7 @@ async def start(client, message):
     title = '@TheBlackXYZ  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))
     f_caption=files.caption
     if f_caption is None:
-        f_caption = f"@TheBlackXYZ  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f"@TheBlackXYZ  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
     if cd["update_channel_link"] != None:
         button = [[
             InlineKeyboardButton('🍿 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍿', url=f'{cd["update_channel_link"]}')
