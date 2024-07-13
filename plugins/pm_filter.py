@@ -2107,7 +2107,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
              InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ-ɪᴅ', callback_data='sticker'),
              InlineKeyboardButton('ᴊ-ꜱᴏɴ', callback_data='json')
          ], [
-             InlineKeyboardButton('Cʟᴏɴᴇ', callback_data='colne'),
              InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2469,7 +2468,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.JSON_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-)
+            )
     elif query.data == "sticker":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
