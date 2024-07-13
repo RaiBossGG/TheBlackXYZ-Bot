@@ -73,10 +73,6 @@ AUTO_APPROVE_MODE = bool(environ.get('AUTO_APPROVE_MODE', True)) # Set True or F
 REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', True)) # Set True Or False
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', True)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub
 
-# Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
-CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
-PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '@TheBlackXYZBotz') # Public Channel Username Without @ and Bot Is Admin In Your Channel.
-CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://TheBlackXYZ06:TheBlackXYZ06@cluster0.ir3gpvr.mongodb.net/?retryWrites=true&w=majority") # Necessary If clone mode is true
 
 # If PREMIUM_AND_REFERAL_MODE is True Then Fill Below Variable, If Flase Then No Need To Fill.
 PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
