@@ -139,7 +139,7 @@ ________________________________________________________________________________
 # Contact - 
 Update Channel 🙂 <a href='https://telegram.dog/TheBlackXYZBotz'>Update Channel</a> Update Regarding For Repo.</b>
 
-# Add from .env
+# Bulk Import ENV.
 Paste your .env contents to add multiple environment variables at once.
 
 <details><summary><b>Add From.env</b></summary>
