@@ -23,7 +23,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'TheBlackBot')
 API_ID = int(environ.get('API_ID', '29450452'))
 API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
-BOT_TOKEN = environ.get('BOT_TOKEN', "7169968647:AAGoQEipnDNVR0xUU-8ETJeawwO9Z49uTpE")
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002101130967'))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
 
