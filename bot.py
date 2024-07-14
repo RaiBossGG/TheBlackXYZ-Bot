@@ -40,7 +40,7 @@ from bot.clients import initialize_clients
 
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
-TheBlackBot.start() 
+TheBlackBot.start()
 loop = asyncio.get_event_loop()
 PORT = "8080"
 
